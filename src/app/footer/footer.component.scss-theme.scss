@@ -1,0 +1,39 @@
+@import '~@angular/material/theming';
+
+// mixin name will be used in main style.scss
+@mixin footer-component-theme($theme) {
+  
+    // retrieve variables from theme 
+    // (all possible variables, use only what you really need)
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, accent);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    // all of these variables contain many additional variables
+
+    .footer {
+        // retrieve particular color from variable, rg: text, base, divider, ...
+        color: mat-color($foreground, text);
+        background-color: mat-color($primary);
+    }
+
+    .btn-facebook {
+        background-color: #3b5998!important;
+    }
+    .btn-google-plus {
+        background-color: #dd4b39!important;
+    }
+    .btn-youtube {
+        background-color: #ff4b39!important;
+    }
+    .btn-linkedin {
+        background-color: #007bb6!important;
+    }
+    .btn-twitter {
+        background-color: #55acee!important;
+    }
+    .btn-mail {
+        background-color: #512da8!important;
+    }
+}
